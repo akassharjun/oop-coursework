@@ -1,7 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c60ec938-ae69-4a78-983d-833f28df2a77" name="Default Changelist" comment="" />
+    <list default="true" id="c60ec938-ae69-4a78-983d-833f28df2a77" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../console-app/.idea/dictionaries/admin.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../console-app/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../console-app/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_6_0_M1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../console-app/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_6_0_M1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../console-app/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_6_0_M1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../console-app/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_6_0_M1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../console-app/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_6_0_M1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../console-app/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_6_0_M1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../console-app/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../console-app/src/test/java/WestminsterRentalVehicleManagerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/vaadin/example/model/BookingStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../oopbackend/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../oopbackend/src/main/java/model/BookingStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../console-app/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../console-app/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../console-app/console-app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../console-app/console-app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../console-app/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../console-app/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../console-app/src/main/java/ConsoleApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../console-app/src/main/java/ConsoleApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../console-app/src/main/java/GraphicalUserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/../console-app/src/main/java/GraphicalUserInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../console-app/src/main/java/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../console-app/src/main/java/controller/WestminsterRentalVehicleManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../console-app/src/main/java/controller/WestminsterRentalVehicleManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../console-app/src/main/java/manager/DatabaseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../console-app/src/main/java/manager/DatabaseManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../console-app/src/main/java/model/Booking.java" beforeDir="false" afterPath="$PROJECT_DIR$/../console-app/src/main/java/model/Booking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../console-app/src/main/java/model/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/../console-app/src/main/java/model/Car.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../console-app/src/main/java/model/Motorbike.java" beforeDir="false" afterPath="$PROJECT_DIR$/../console-app/src/main/java/model/Motorbike.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../console-app/src/main/java/model/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/../console-app/src/main/java/model/Vehicle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../console-app/src/main/java/utils/TableList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../console-app/src/main/java/utils/Utilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/../console-app/src/main/java/utils/Utilities.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../console-app/target/classes/ConsoleApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/../console-app/target/classes/ConsoleApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../console-app/target/classes/GraphicalUserInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/../console-app/target/classes/GraphicalUserInterface.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../console-app/target/classes/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../console-app/target/classes/controller/WestminsterRentalVehicleManager$SortByMake.class" beforeDir="false" afterPath="$PROJECT_DIR$/../console-app/target/classes/controller/WestminsterRentalVehicleManager$SortByMake.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../console-app/target/classes/controller/WestminsterRentalVehicleManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/../console-app/target/classes/controller/WestminsterRentalVehicleManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../console-app/target/classes/manager/DatabaseManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/../console-app/target/classes/manager/DatabaseManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../console-app/target/classes/model/Booking.class" beforeDir="false" afterPath="$PROJECT_DIR$/../console-app/target/classes/model/Booking.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../console-app/target/classes/model/Car.class" beforeDir="false" afterPath="$PROJECT_DIR$/../console-app/target/classes/model/Car.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../console-app/target/classes/model/Motorbike.class" beforeDir="false" afterPath="$PROJECT_DIR$/../console-app/target/classes/model/Motorbike.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../console-app/target/classes/model/Vehicle.class" beforeDir="false" afterPath="$PROJECT_DIR$/../console-app/target/classes/model/Vehicle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../console-app/target/classes/utils/TableList$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../console-app/target/classes/utils/TableList$EnumAlignment.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../console-app/target/classes/utils/TableList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../console-app/target/classes/utils/Utilities.class" beforeDir="false" afterPath="$PROJECT_DIR$/../console-app/target/classes/utils/Utilities.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../console-app/vehicle.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../console-app/vehicle.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vaadin/example/MainView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vaadin/example/MainView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vaadin/example/VehicleManagerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vaadin/example/VehicleManagerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vaadin/example/model/Booking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vaadin/example/model/Booking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/vaadin/example/model/Date.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/vaadin/example/model/Date.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oopbackend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../oopbackend/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oopbackend/oopbackend.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oopbackend/src/main/java/Auth.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oopbackend/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oopbackend/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oopbackend/src/main/java/manager/DatabaseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oopbackend/src/main/java/manager/DatabaseManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oopbackend/src/main/java/model/Booking.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oopbackend/src/main/java/model/Booking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oopbackend/src/main/java/model/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oopbackend/src/main/java/model/Car.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oopbackend/src/main/java/model/Date.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oopbackend/src/main/java/model/Date.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oopbackend/src/main/java/model/Motorbike.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oopbackend/src/main/java/model/Motorbike.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oopbackend/src/main/java/model/Schedule.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oopbackend/src/main/java/model/Schedule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oopbackend/src/main/java/model/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oopbackend/src/main/java/model/Vehicle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oopbackend/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../oopbackend/target/classes/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oopbackend/target/classes/manager/DatabaseManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/../oopbackend/target/classes/manager/DatabaseManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oopbackend/target/classes/model/Booking.class" beforeDir="false" afterPath="$PROJECT_DIR$/../oopbackend/target/classes/model/Booking.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oopbackend/target/classes/model/Car.class" beforeDir="false" afterPath="$PROJECT_DIR$/../oopbackend/target/classes/model/Car.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oopbackend/target/classes/model/Date.class" beforeDir="false" afterPath="$PROJECT_DIR$/../oopbackend/target/classes/model/Date.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oopbackend/target/classes/model/Motorbike.class" beforeDir="false" afterPath="$PROJECT_DIR$/../oopbackend/target/classes/model/Motorbike.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oopbackend/target/classes/model/Schedule.class" beforeDir="false" afterPath="$PROJECT_DIR$/../oopbackend/target/classes/model/Schedule.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oopbackend/target/classes/model/Vehicle.class" beforeDir="false" afterPath="$PROJECT_DIR$/../oopbackend/target/classes/model/Vehicle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../uml/OOPCW.mdj" beforeDir="false" afterPath="$PROJECT_DIR$/../uml/OOPCW.mdj" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +85,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
@@ -23,10 +96,12 @@
     </option>
   </component>
   <component name="ProjectId" id="1UMWc7qIFyCOz4BsgmkylTz22ui" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/vaadin/example" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -87,11 +162,23 @@
       <workItem from="1575167024204" duration="4016000" />
       <workItem from="1575176596775" duration="10526000" />
       <workItem from="1575209709097" duration="7355000" />
+      <workItem from="1575249285190" duration="14339000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="com.vaadin.designer2.intellij.settings.SizePresetsSettingsComponent">
     <option name="sizePresets">

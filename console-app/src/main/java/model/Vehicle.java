@@ -1,9 +1,16 @@
 package model;
 
+import dev.morphia.annotations.Entity;
+import dev.morphia.annotations.Id;
+import org.bson.types.ObjectId;
+
 import java.io.Serializable;
 import java.math.BigDecimal;
 
+@Entity("vehicles")
 public abstract class Vehicle  implements Serializable {
+    @Id
+    private ObjectId id;
     protected Make make;
     protected String plateNumber;
     protected Transmission transmission;
@@ -17,6 +24,10 @@ public abstract class Vehicle  implements Serializable {
         this.plateNumber = plateNumber;
         this.transmission = transmission;
         this.rate = rate;
+    }
+
+    public ObjectId getId() {
+        return id;
     }
 
     public Make getMake() {

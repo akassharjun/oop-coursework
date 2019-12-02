@@ -56,7 +56,7 @@ public class Date {
     }
 
     private void setYear(int year) {
-        if (year > 2019 || year < 1) {
+        if (year > 3000 || year < 1) {
             throw new IllegalArgumentException("Year should be in range of 1-2019");
         }
         this.year = year;
@@ -75,5 +75,10 @@ public class Date {
     @Override
     public int hashCode() {
         return Objects.hash(day, month, year);
+    }
+
+    @Override
+    public String toString() {
+        return day + "/" + month + "/" + year;
     }
 }

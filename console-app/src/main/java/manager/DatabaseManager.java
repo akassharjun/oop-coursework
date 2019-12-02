@@ -29,62 +29,45 @@ public class DatabaseManager {
 
 
     /**
-     * Saves a car to the database
-     * @param car the car
+     * Saves a vehicle to the database
+     * @param vehicle the vehicle
      */
-    public void insertCar(Car car)  {
-        datastore.save(car);
+    public void insertVehicle(Vehicle vehicle)  {
+        datastore.save(vehicle);
     }
 
-    /**
-     * Saves a motorbike to the database
-     * @param motorbike the motorbike
-     */
-    public void insertMotorbike(Motorbike motorbike) {
-        datastore.save(motorbike);
-    }
 
     /**
-     * Deletes a model.Car from the database
-     * @param itemId the object id of the car item
+     * Deletes a Vehicle from the database
+     * @param itemId the object id of the vehicle item
      */
-    public void deleteCar(ObjectId itemId){
-        final Query<Car> query = datastore.createQuery(Car.class).filter("_id ==", itemId);
+    public void deleteVehicle(ObjectId itemId){
+        final Query<Vehicle> query = datastore.createQuery(Vehicle.class).filter("_id ==", itemId);
         datastore.delete(query);
     }
 
     /**
-     * Deletes a model.Motorbike from the database
-     * @param itemId the object id of the motorbike item
+     * Retrieves all the Vehicles from database
+     * @return List<Vehicle> list of vehicles
      */
-    public void deleteMotorbike(ObjectId itemId) {
-        final Query<Motorbike> query = datastore.createQuery(Motorbike.class).filter("_id ==", itemId);
-        datastore.delete(query);
-    }
-
-    /**
-     * Retrieves all the Cars from database
-     * @return List<Car> list of cars
-     */
-    public List<Car> getAllCars() {
-        final Query<Car> query = datastore.createQuery(Car.class);
+    public List<Vehicle> getAllVehicles() {
+        final Query<Vehicle> query = datastore.createQuery(Vehicle.class);
         return query.find().toList();
     }
 
     /**
-     * Retrieves all the Motorbikes from database
-     * @return List<Motorbike> list of motorbikes
+     * Retrieves all the Booking information from the database
+     * @return List<Booking> list of bookings
      */
-    public List<Motorbike> getAllMotorbikes() {
-        final Query<Motorbike> query = datastore.createQuery(Motorbike.class);
-        return query.find().toList();
-    }
-
     public List<Booking> getAllBooking() {
         final Query<Booking> query = datastore.createQuery(Booking.class);
         return query.find().toList();
     }
 
+    /**
+     * Retrieves all the Booking information from the database
+     * @param booking the booking object
+     */
     public void saveBookingDetails(Booking booking){
     datastore.save(booking);
     }

@@ -4,7 +4,6 @@ import com.google.gson.Gson;
 import de.vandermeer.asciitable.AsciiTable;
 import manager.DatabaseManager;
 import model.*;
-import utils.TableList;
 import utils.Utilities;
 
 import java.io.File;
@@ -24,49 +23,28 @@ public class WestminsterRentalVehicleManager implements RentalVehicleManager {
     public WestminsterRentalVehicleManager() {
         databaseManager = new DatabaseManager();
 
-        for (int i = 0; i < 50; i++) {
-
-            Make carMakeValue = Make.getRandomMake();
-
-            while (carMakeValue.toString().equals("DUCATTI") || carMakeValue.toString().equals("HONDA") || carMakeValue.toString().equals("BAJAJ") || carMakeValue.toString().equals("SCOOTYPEP") || carMakeValue.toString().equals("KAWASAKI") || carMakeValue.toString().equals("YAMAHA")) {
-                carMakeValue = Make.getRandomMake();
-            }
-
-            Make motorbikeValue = Make.getRandomMake();
-
-            while (!motorbikeValue.toString().equals("DUCATTI") && !motorbikeValue.toString().equals("HONDA") && !motorbikeValue.toString().equals("BAJAJ") && !motorbikeValue.toString().equals("SCOOTYPEP") && !motorbikeValue.toString().equals("KAWASAKI") && !motorbikeValue.toString().equals("YAMAHA")) {
-                motorbikeValue = Make.getRandomMake();
-            }
-
-            Transmission transmission = Transmission.getRandomTransmission();
-
-            StandType standType = StandType.getRandomStandType();
-
-            Car car = new Car(carMakeValue, "C" + i, transmission, new BigDecimal(new Random().nextInt(10000 - 50) + 50), new Random().nextInt(4 - 2) + 2, true);
-            Motorbike motorbike = new Motorbike(motorbikeValue, "B" + i, transmission, new BigDecimal(new Random().nextInt(10000 - 50) + 50), true, standType);
-            vehicleList.add(car);
-            vehicleList.add(motorbike);
-//            databaseManager.insertCar(car);
-//            databaseManager.insertMotorbike(motorbike);
-        }
-        vehicleList.addAll(databaseManager.getAllCars());
-        vehicleList.addAll(databaseManager.getAllMotorbikes());
+        vehicleList.addAll(databaseManager.getAllVehicles());
     }
 
+    /**
+     * Displays the menu options for the WestminsterRentalVehicleManager
+     */
     public void displayMenu() {
         System.out.println("Main Menu" +
                 "\n1. Add Vehicle" +
                 "\n2. Delete Vehicle" +
                 "\n3. Print Vehicle List" +
                 "\n4. Write/Save Vehicle List" +
-                "\n5. Open Customer Console" +
-                "\n6. Exit"
+                "\n5. Exit"
         );
     }
 
+    /**
+     * Adds a vehicle to the Vehicle List managed by the rental store
+     */
     @Override
     public void addVehicle() {
-        if (vehicleList.size() > 50) {
+        if (vehicleList.size() >= 50) {
             System.out.println("No more lots!");
             return;
         }
@@ -107,7 +85,7 @@ public class WestminsterRentalVehicleManager implements RentalVehicleManager {
 
             Car car = new Car(make, plateNumber, transmission, rate, numberOfDoors, sunroof.equals("Y"));
             vehicleList.add(car);
-            databaseManager.insertCar(car);
+            databaseManager.insertVehicle(car);
         } else {
             String pedal = Utilities.getConditionalString("Does the motorbike have pedals? (Y/N)",
                     Arrays.asList("Y", "N"));
@@ -121,25 +99,26 @@ public class WestminsterRentalVehicleManager implements RentalVehicleManager {
 
             Motorbike motorbike = new Motorbike(make, plateNumber, transmission, rate, pedal.equals("Y"), standType);
             vehicleList.add(motorbike);
-            databaseManager.insertMotorbike(motorbike);
+            databaseManager.insertVehicle(motorbike);
         }
     }
 
+    /**
+     * Deletes a vehicle to the Vehicle List managed by the rental store
+     */
     @Override
     public void deleteVehicle() {
-        for (int i = 0; i < vehicleList.size(); i++) {
-            System.out.println(i + 1 + " " + vehicleList.get(i).toString());
-        }
+        printVehicleStockList();
         System.out.println("Which vehicle would you like to delete? : ");
-        String plateNumber = new Scanner(System.in).nextLine();
+        String plateNumber = new Scanner(System.in).nextLine().toLowerCase();
 
-        Optional<Vehicle> vehicle = vehicleList.stream().filter(v -> v.getPlateNumber().equals(plateNumber)).findAny();
-
+        Optional<Vehicle> vehicle = vehicleList.stream().filter(v -> v.getPlateNumber().toLowerCase().equals(plateNumber)).findAny();
 
         if (vehicle.isPresent()) {
             System.out.println(vehicle.get());
 
             vehicleList.remove(vehicle.get());
+            databaseManager.deleteVehicle(vehicle.get().getId());
 
             System.out.println("Removed Vehicle");
         } else {
@@ -151,6 +130,9 @@ public class WestminsterRentalVehicleManager implements RentalVehicleManager {
         System.out.println("Remaining slots : " + remainingSlots);
     }
 
+    /**
+     * Prints the list of vehicles available in the rental store
+     */
     @Override
     public void printVehicleStockList() {
 
@@ -163,7 +145,7 @@ public class WestminsterRentalVehicleManager implements RentalVehicleManager {
 
         for (Vehicle vehicle : vehicleList) {
             if (vehicle instanceof Car) {
-                at.addRow("Car", vehicle.getMake(), vehicle.getPlateNumber(), vehicle.getTransmission(), vehicle.getRate(), ((Car) vehicle).getNumberOfDoors(), ((Car) vehicle).hasSunRoof()  ? "Has" : "Doesn't have", "-", "-");
+                at.addRow("Car", vehicle.getMake(), vehicle.getPlateNumber(), vehicle.getTransmission(), vehicle.getRate(), ((Car) vehicle).getNumberOfDoors(), ((Car) vehicle).hasSunRoof() ? "Has" : "Doesn't have", "-", "-");
             } else {
                 at.addRow("Motorbike", vehicle.getMake(), vehicle.getPlateNumber(), vehicle.getTransmission(), vehicle.getRate(), "-", "-", ((Motorbike) vehicle).getStandType(), ((Motorbike) vehicle).isHasPedals() ? "Has" : "Doesn't have");
             }
@@ -174,20 +156,32 @@ public class WestminsterRentalVehicleManager implements RentalVehicleManager {
         System.out.println(at.render(120));
     }
 
+    /**
+     * Saves the list of vehicles available in the rental store into a json file
+     */
     @Override
     public void saveVehicleStockList() {
-        File file = new File("vehicle.txt");
+        File file = new File("vehicle.json");
         try (FileWriter fileWriter = new FileWriter(file)) {
             try (PrintWriter printWriter = new PrintWriter(fileWriter, true)) {
                 Gson gson = new Gson();
                 printWriter.write(gson.toJson(vehicleList));
+                System.out.println("Successfully saved the data to the list!");
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    static class SortByMake implements Comparator<Vehicle> {
+
+    /**
+     * Books a vehicle
+     */
+    public static void bookVehicle(Schedule schedule, Vehicle vehicle) {
+        databaseManager.saveBookingDetails(new Booking(schedule, vehicle.getPlateNumber()));
+    }
+
+    public static class SortByMake implements Comparator<Vehicle> {
         // Used for sorting in ascending order of
         // roll name
         public int compare(Vehicle a, Vehicle b) {
@@ -195,8 +189,5 @@ public class WestminsterRentalVehicleManager implements RentalVehicleManager {
         }
     }
 
-    public static void bookVehicle(Schedule schedule, Vehicle vehicle) {
-        databaseManager.saveBookingDetails(new Booking(schedule, vehicle));
-    }
 
 }

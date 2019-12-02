@@ -7,6 +7,11 @@ import java.util.Scanner;
 
 public class Utilities {
 
+    /**
+     * Gets a Number Input from the user using Scanner
+     * @param prompt the prompt string
+     * @param className the number type (ex : BigDecimal.class, Double.class)
+     */
     public static Object getNumberInput(String prompt, Class className) {
         System.out.format("%s : ", prompt);
         Object value = null;
@@ -35,10 +40,14 @@ public class Utilities {
 
         // moving to the next line, because scanner.next() will not move to the next line.
         scanner.nextLine();
-//        scanner.close();
         return value;
     }
 
+    /**
+     * Gets a String Input from the a given String array from the user using Scanner
+     * @param prompt the prompt string
+     * @param values the values that are allowed for the input
+     */
     public static String getConditionalString(String prompt, List<String> values) {
         String stringValue = "";
         Scanner in = new Scanner(System.in);
@@ -55,18 +64,14 @@ public class Utilities {
         return stringValue;
     }
 
+    /**
+     * Gets a String Input from the user using Scanner
+     * @param prompt the prompt string
+     */
     public static String getPlainString(String prompt) {
         Scanner in = new Scanner(System.in);
         System.out.printf("\n%s : ", prompt);
         return in.nextLine().toUpperCase();
-    }
-
-    public static String getConditionalString(String prompt, List<String> values, boolean canBeEmpty) {
-        if (canBeEmpty) {
-            values.add(" ");
-        }
-
-        return getConditionalString(prompt, values);
     }
 
 }

@@ -8,15 +8,25 @@ import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
 
+/**
+ * Console Application
+ * The base class for the console application
+ *
+ * @author Akassharjun Shamugarajah
+ */
+
+
 public class ConsoleApp {
 
+    /**
+     * The beginning point for the application
+     */
     public static void main(String[] args) throws IOException, URISyntaxException {
         WestminsterRentalVehicleManager westminsterRentalVehicleManager = new WestminsterRentalVehicleManager();
         int option = 0;
-//        GraphicalUserInterface.main();
+
 //        Thread backgroundThread = new Thread(GraphicalUserInterface::main);
 //        backgroundThread.start();
-//        Platform.runLater(GraphicalUserInterface::displayStage);
 
         while (option != 6) {
             westminsterRentalVehicleManager.displayMenu();
@@ -36,15 +46,6 @@ public class ConsoleApp {
                     westminsterRentalVehicleManager.saveVehicleStockList();
                     break;
                 case 5:
-                    File reactAppDirectory = new File("/Users/admin/Code/Projects/oop-gui/");
-                    Process process = new ProcessBuilder("npm", "start")
-                            .directory(reactAppDirectory)
-                            .start();
-                    if (Desktop.isDesktopSupported() && Desktop.getDesktop().isSupported(Desktop.Action.BROWSE)) {
-                        Desktop.getDesktop().browse(new URI("http://localhost:3000/"));
-                    }
-                    break;
-                case 6:
                     System.out.println("You chose to exit the program. Have a nice day! :)\nQuitting....");
                     break;
             }

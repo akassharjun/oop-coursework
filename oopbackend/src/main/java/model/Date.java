@@ -13,6 +13,10 @@ public class Date {
         this.setYear(year);
     }
 
+    public Date() {
+
+    }
+
     public int getDay() {
         return day;
     }

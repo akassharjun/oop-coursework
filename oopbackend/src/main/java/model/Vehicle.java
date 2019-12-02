@@ -1,9 +1,12 @@
 package model;
 
+import dev.morphia.annotations.Entity;
+
 import java.io.Serializable;
 import java.math.BigDecimal;
 
-public abstract class Vehicle  implements Serializable {
+@Entity("vehicles")
+public abstract class Vehicle implements Serializable {
     protected Make make;
     protected String plateNumber;
     protected Transmission transmission;

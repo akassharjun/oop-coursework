@@ -9,6 +9,15 @@ import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 
+
+/**
+ * GraphicalUserInterface
+ * The base class for the graphical user interface
+ *
+ * @author Akassharjun Shamugarajah
+ */
+
+
 public class  GraphicalUserInterface extends Application {
     private static Stage primaryStage;
 

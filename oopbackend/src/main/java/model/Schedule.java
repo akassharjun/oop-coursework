@@ -11,6 +11,9 @@ public class Schedule {
         this.dropOffDate = dropOffDate;
     }
 
+    public Schedule() {
+    }
+
     public Date getPickUpDate() {
         return pickUpDate;
     }

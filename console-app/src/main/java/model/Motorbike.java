@@ -5,7 +5,7 @@ import dev.morphia.annotations.Entity;
 import java.io.Serializable;
 import java.math.BigDecimal;
 
-@Entity("motorbike")
+@Entity("vehicles")
 public class Motorbike extends Vehicle  implements Serializable {
     private boolean hasPedals;
     private StandType standType;
