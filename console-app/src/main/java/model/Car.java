@@ -1,0 +1,42 @@
+package model;
+
+import dev.morphia.annotations.Entity;
+
+import java.io.Serializable;
+import java.math.BigDecimal;
+
+@Entity("car")
+public class Car extends Vehicle implements Serializable {
+    private int numberOfDoors;
+    private boolean hasSunRoof;
+
+    public Car(Make make, String plateNumber, Transmission transmission, BigDecimal rate, int numberOfDoors, boolean hasSunRoof) {
+        super(make, plateNumber, transmission, rate);
+        this.numberOfDoors = numberOfDoors;
+        this.hasSunRoof = hasSunRoof;
+    }
+
+    public Car() {
+
+    }
+
+    public int getNumberOfDoors() {
+        return numberOfDoors;
+    }
+
+    public boolean hasSunRoof() {
+        return hasSunRoof;
+    }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "numberOfDoors=" + numberOfDoors +
+                ", hasSunRoof=" + hasSunRoof +
+                ", make=" + make +
+                ", plateNumber='" + plateNumber + '\'' +
+                ", transmission=" + transmission +
+                ", rate=" + rate +
+                '}';
+    }
+}

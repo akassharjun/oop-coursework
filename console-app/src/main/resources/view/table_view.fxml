@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.shape.Box?>
+
+<?import javafx.scene.control.DatePicker?>
+<AnchorPane fx:controller="controller.TableController" id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity"
+            minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8.0.172-ea"
+            xmlns:fx="http://javafx.com/fxml/1">
+    <VBox>
+        <Box height="10"/>
+        <Label>Welcome to the Westminster Rental Vehicle Manager!</Label>
+        <Box height="10"/>
+        <Label>Search</Label>
+        <Box height="10"/>
+        <HBox>
+            <Box width="20"/>
+            <TextField fx:id="searchBox" promptText="Enter title here"/>
+            <Box width="20"/>
+            <Button fx:id="searchButton" onMouseClicked="#onSearchButtonClick">Search</Button>
+        </HBox>
+        <Box height="10"/>
+        <Label>Booking</Label>
+        <Box height="10"/>
+        <HBox>
+            <Box width="20"/>
+            <VBox>
+                <Label>Pick Up Date :</Label>
+                <DatePicker fx:id="pickUpDate"/>
+            </VBox>
+            <Box width="20"/>
+            <VBox>
+                <Label>Drop Off Date :</Label>
+                <DatePicker fx:id="dropOffDate"/>
+            </VBox>
+            <Box width="20"/>
+            <VBox>
+                <Label></Label>
+                <Button fx:id="bookButton" onMouseClicked="#onBookButtonPressed">Book Vehicle</Button>
+            </VBox>
+        </HBox>
+        <Box height="10"/>
+        <Box height="25"/>
+        <TableView fx:id="tableView" prefHeight="300.0" prefWidth="925.0">
+            <columns>
+                <!-- Total Width : 885 -->
+                <TableColumn fx:id="plateNumber" prefWidth="200.0" text="Plate Number"/>
+                <TableColumn fx:id="make" prefWidth="125.0" text="Make"/>
+                <TableColumn fx:id="transmission" prefWidth="100.0" text="Transmission"/>
+                <TableColumn fx:id="rate" prefWidth="125.0" text="Rate"/>
+                <TableColumn fx:id="numberOfDoors" prefWidth="125.0" text="Number Of Door"/>
+                <TableColumn fx:id="hasSunRoof" prefWidth="75.0" text="Sun Roof"/>
+                <TableColumn fx:id="standType" prefWidth="100.0" text="Stand Type"/>
+                <TableColumn fx:id="hasPedals" prefWidth="75.0" text="Pedals"/>
+            </columns>
+        </TableView>
+    </VBox>
+</AnchorPane>
