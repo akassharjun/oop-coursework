@@ -1,5 +1,7 @@
 # Vehicle Booking System (oop-coursework)
 
+A full stack web application built for a vehicle booking system for my Object Oriented Programming coursework.
+
 ## Prerequisites
 - Java 1.8
 
